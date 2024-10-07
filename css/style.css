@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0 auto;
+}
+
+#main-contianer {
+  width: 90%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#main-contianer h2 {
+  font-size: 40px;
+  font-weight: 500;
+  text-align: center;
+  margin-bottom: 20px;
+  line-height: 50px;
+
+}
+
+#editor-container {
+  min-height: 450px;
+  max-height: auto;
+  padding: 10px;
+  border: 2px solid #686599;
+  border-top: 0;
+  border-radius: 0px 0px 10px 10px;
+  background-color: #fff;
+  overflow-y: auto;
+
+}
+
+/* toolbar  */
+#custom-toolbar {
+  border-radius: 10px 10px 0px 0px;
+  border: 2px solid #686599;
+  padding: 20px 50px;
+
+}
+
+@media (max-width: 992px) {
+  #main-contianer {
+    width: 95%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  #custom-toolbar {
+    border-radius: 10px 10px 0px 0px;
+    border: 2px solid #686599;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+
+  .ql-snow .ql-picker.ql-size {
+    width: 80px;
+  }
+}
