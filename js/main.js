@@ -4,7 +4,7 @@ const quill = new Quill('#editor-container', {
     modules: {
         toolbar: [
             // Font family selection
-            [{ font: ['serif', 'sans-serif', 'monospace', 'arial', 'georgia',] }],
+            [{ font: ['serif', 'sans-serif', 'monospace',] }],
             // Font size selection
             [{ size: ['small', false, 'large', 'huge'] }],
             // Header styles
