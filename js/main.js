@@ -7,6 +7,8 @@ const quill = new Quill('#editor-container', {
             [{ font: ['serif', 'sans-serif', 'monospace', 'arial', 'georgia',] }],
             // Font size selection
             [{ size: ['small', false, 'large', 'huge'] }],
+            // Header styles
+            [{ header: [1, 2, 3, false] }],
             // Text formatting options
             ['bold', 'italic', 'underline', 'strike'], // Bold, italic, underline, strikethrough
             // Text color and background color
