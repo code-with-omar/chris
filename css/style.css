@@ -7,12 +7,14 @@
 
 #main-contianer {
   width: 90%;
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
-#editor-container{
+
+#editor-container {
   padding: 20px 50px;
 }
+
 #main-contianer h2 {
   font-size: 40px;
   font-weight: 500;
@@ -24,9 +26,9 @@
 
 #editor-container {
   min-height: 450px;
-  max-height: auto;
+
   padding: 10px;
-  border: 2px solid #686599;
+  border: 2px solid #0000004d;
   border-top: 0;
   border-radius: 0px 0px 10px 10px;
   background-color: #fff;
@@ -34,10 +36,15 @@
 
 }
 
+#editor-container p {
+  min-height: 450px;
+
+}
+
 /* toolbar  */
 #custom-toolbar {
   border-radius: 10px 10px 0px 0px;
-  border: 2px solid #686599;
+  border: 2px solid #0000004d;
   padding: 30px 20px;
 
 }
@@ -48,6 +55,15 @@
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
+  #editor-container {
+    min-height: 300px;
+  }
+
+  #editor-container p {
+    min-height: 350px;
+  }
+
   #custom-toolbar {
     border-radius: 10px 10px 0px 0px;
     border: 2px solid #686599;

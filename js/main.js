@@ -14,7 +14,7 @@ const quill = new Quill('#editor-container', {
             // Text color and background color
             [{ color: [] }, { background: [] }],
             // Header styles
-            [{ header: [1, 2, 3, false] }],
+           
             // Lists
             [{ list: 'ordered' }, { list: 'bullet' }],
             // Text alignment
