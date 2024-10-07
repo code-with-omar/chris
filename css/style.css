@@ -10,7 +10,9 @@
   padding-top: 50px;
   padding-bottom: 50px;
 }
-
+#editor-container{
+  padding: 20px 50px;
+}
 #main-contianer h2 {
   font-size: 40px;
   font-weight: 500;
@@ -36,7 +38,7 @@
 #custom-toolbar {
   border-radius: 10px 10px 0px 0px;
   border: 2px solid #686599;
-  padding: 20px 50px;
+  padding: 30px 20px;
 
 }
 
