@@ -160,10 +160,7 @@
     min-height: 300px;
   }
 
-  #editor-container p {
-    /* Ensure paragraphs inside the editor have a minimum height */
-    min-height: 350px;
-  }
+  
 
   #custom-toolbar {
     /* Keep rounded corners for the toolbar */
