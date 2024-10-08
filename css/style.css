@@ -1,57 +1,79 @@
 /* Global Styles */
 * {
+  /* Reset margin and padding for all elements */
   margin: 0;
   padding: 0;
+  /* Ensure consistent box-sizing across all elements */
   box-sizing: border-box;
+  /* Center-align content */
   margin: 0 auto;
 }
 
 /* Main Container */
 #main-container {
-  /* Typo: should be #main-container */
+  /* Container width set to 90% of the viewport */
   width: 90%;
+  /* Add padding at the top and bottom */
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-
-
 #main-container h2 {
-  /* Typo: should be #main-container h2 */
+  /* Heading styles inside the main container */
   font-size: 40px;
+  /* Font size for h2 */
   font-weight: 500;
+  /* Medium font weight */
   text-align: center;
+  /* Center align the text */
   margin-bottom: 20px;
+  /* Margin below the heading */
   line-height: 50px;
+  /* Set line height for the heading */
 }
 
 /* Editor Container Styles */
 #editor-container {
-
+  /* Minimum height for the editor area */
   min-height: 450px;
-
+  /* Add padding inside the editor container */
   padding: 10px;
+  /* Border around the editor container */
   border: 2px solid #0000004d;
+  /* Remove top border */
   border-top: 0;
+  /* Rounded bottom corners for the editor container */
   border-radius: 0px 0px 10px 10px;
+  /* White background for the editor */
   background-color: #fff;
+  /* Enable vertical scrolling if content overflows */
   overflow-y: auto;
 }
 
 /* Toolbar */
+.ql-editor {
+  /* Set a minimum height for the Quill editor */
+  min-height: 450px;
+}
+
 #custom-toolbar {
+  /* Rounded top corners for the custom toolbar */
   border-radius: 10px 10px 0px 0px;
+  /* Border for the custom toolbar */
   border: 2px solid #0000004d;
+  /* Add padding inside the toolbar */
   padding: 30px 20px;
+  /* Center-align the toolbar content */
   text-align: center;
 }
 
-/* custom font  */
-
+/* Custom Font Sizes for the Quill Editor */
 .ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(1)::before {
+  /* Display '11px' in the font size picker */
   content: '11px';
 }
 
+/* Similarly set custom font sizes for the other font-size options */
 .ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(2)::before {
   content: '12px';
 }
@@ -97,48 +119,64 @@
 }
 
 .ql-snow .ql-picker.ql-size .ql-picker-item:last-child:before {
+  /* Display '72px' for the last item (largest font size) */
   content: '72px';
 }
 
 .ql-snow .ql-picker.ql-size .ql-picker-label::before,
 .ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  /* Display the size value for the selected font size in the picker */
   content: attr(data-value);
 }
 
 .ql-snow .ql-editor pre.ql-syntax {
+  /* Background color for code blocks in the editor */
   background-color: green;
+  /* Text color for code blocks */
   color: #f8f8f2;
+  /* Allow the content to overflow if needed */
   overflow: visible;
 }
 
 /* Responsive Styles */
 @media (max-width: 992px) {
+  /* Adjust styles for screens smaller than 992px (tablet or small desktop) */
+
   #main-container {
-    /* Typo: should be #main-container */
+    /* Increase width to 95% on smaller screens */
     width: 95%;
+    /* Increase padding at the top and bottom */
     padding-top: 50px;
     padding-bottom: 50px;
   }
 
+  .ql-editor {
+    /* Set a minimum height for the Quill editor */
+    min-height: 300px;
+  }
+
   #editor-container {
+    /* Reduce minimum height of the editor on smaller screens */
     min-height: 300px;
   }
 
   #editor-container p {
+    /* Ensure paragraphs inside the editor have a minimum height */
     min-height: 350px;
   }
 
   #custom-toolbar {
+    /* Keep rounded corners for the toolbar */
     border-radius: 10px 10px 0px 0px;
+    /* Adjust the border color on smaller screens */
     border: 2px solid #686599;
+    /* Remove left and right padding on smaller screens */
     padding-left: 0px;
     padding-right: 0px;
   }
 
-  /* Quill Picker Width */
+  /* Adjust Quill picker width for smaller screens */
   .ql-snow .ql-picker.ql-size {
     width: 80px;
   }
-
-
 }
