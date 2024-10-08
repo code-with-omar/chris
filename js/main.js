@@ -1,18 +1,17 @@
 // Import Quill and Block
-const Block = Quill.import('blots/block');
-//font-size as like ms word
-const fontSizeArr = ['11px', '12px', '14px', '16px', '18px', '20px', '22px', '24px', '26px', '28px', '36px', '48', '72'];
+var Block = Quill.import('blots/block');
+
+// font-size similar to MS Word
+var fontSizeArr = ['11px', '12px', '14px', '16px', '18px', '20px', '22px', '24px', '26px', '28px', '36px', '48px', '72px'];
 
 var Size = Quill.import('attributors/style/size');
 Size.whitelist = fontSizeArr;
 Quill.register(Size, true);
-// Register the custom blot with Quill
-
 
 // Initialize Quill editor
 const quill = new Quill('#editor-container', {
     theme: 'snow',
-    placeholder: 'Enter your text here...',
+    
     modules: {
         toolbar: [
             // Font family selection
@@ -22,13 +21,14 @@ const quill = new Quill('#editor-container', {
             // Header styles
             [{ header: [1, 2, 3, 4, 5, 6, false] }],
             // Text formatting options
-            ['bold', 'italic', 'underline', 'strike'], // Bold, italic, underline, strikethrough
+            ['bold', 'italic', 'underline', 'strike'],
             // Text color and background color
             [{ color: [] }, { background: [] }],
             // Lists
             [{ list: 'ordered' }, { list: 'bullet' }],
-            // Text alignment
-            [{ align: [] }],
+            // Text alignment and text direction (left-to-right and right-to-left)
+            [{ 'align': null }, { 'align': 'center' }, { 'align': 'right' }, { 'align': 'justify' }],
+            // [{ 'align': ['', 'right', 'center']}],
             // Blockquote and code block
             ['blockquote', 'code-block'],
             // Emoji button
@@ -51,7 +51,7 @@ if (toolbar) {
 // Select the existing SVG icon for color
 const colorDropdown = document.querySelector('.ql-background');
 
-// Add highlighter as like as google sheet
+// Add highlighter like Google Sheets
 if (colorDropdown) {
     const existingSVG = colorDropdown.querySelector('.ql-picker-label'); // Find existing SVG
     if (existingSVG) {
@@ -65,5 +65,6 @@ if (colorDropdown) {
         existingSVG.innerHTML = newSVG; // Replace with new SVG
     }
 }
+
 // Enable spell check
 document.querySelector('.ql-editor').setAttribute('spellcheck', 'true');
