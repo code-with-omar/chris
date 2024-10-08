@@ -7,18 +7,17 @@
 }
 
 /* Main Container */
-#main-contianer { /* Typo: should be #main-container */
+#main-contianer {
+  /* Typo: should be #main-container */
   width: 90%;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
-/* Editor Container */
-#editor-container {
-  padding: 20px 50px;
-}
 
-#main-contianer h2 { /* Typo: should be #main-container h2 */
+
+#main-contianer h2 {
+  /* Typo: should be #main-container h2 */
   font-size: 40px;
   font-weight: 500;
   text-align: center;
@@ -50,9 +49,109 @@
   text-align: center;
 }
 
+/* custom font  */
+
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(1)::before {
+  content: '11px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(2)::before {
+  content: '12px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(3)::before {
+  content: '14px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(4)::before {
+  content: '16px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(5)::before {
+  content: '18px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(6)::before {
+  content: '20px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(7)::before {
+  content: '22px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(8)::before {
+  content: '24px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(9)::before {
+  content: '26px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(10)::before {
+  content: '28px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(11)::before {
+  content: '36px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-child(12)::before {
+  content: '48px';
+}
+.ql-snow .ql-picker.ql-size .ql-picker-item:last-child:before {
+  content: '72px';
+}
+
+.ql-snow .ql-picker.ql-size .ql-picker-label::before, 
+.ql-snow .ql-picker.ql-size .ql-picker-item::before {
+  content: attr(data-value);
+}
+
+/* .ql-snow .ql-picker.ql-size .ql-picker-label::before,
+.ql-snow .ql-picker.ql-size .ql-picker-item:nth-of-type(15)::before {
+  content: '48px';
+} */
+
+
+.ql-snow .ql-editor pre.ql-syntax {
+  background-color: green;
+  color: #f8f8f2;
+  overflow: visible;
+}
+
+/* Target the alignment dropdown */
+.ql-align .ql-picker-options {
+  display: flex;
+  /* Make it horizontal */
+  flex-direction: row;
+  /* Align items left to right */
+  position: absolute;
+  /* Keep it floating */
+  left: 0;
+  /* Ensure it aligns to the left */
+  top: 0;
+  /* Keep it at the same vertical position */
+  z-index: 10;
+  /* Make sure it's above other content */
+  background-color: white;
+  /* Optional: Ensure the background is visible */
+  border: 1px solid #ccc;
+  /* Optional: Add a border for clarity */
+  padding: 5px;
+  /* Optional: Add spacing around the options */
+  width: auto;
+  /* Adjust the width dynamically */
+  height: auto;
+  /* Remove vertical dropdown height */
+  white-space: nowrap;
+  /* Prevent items from wrapping to a new line */
+}
+
+/* Optional: Style individual alignment buttons */
+.ql-align .ql-picker-item {
+  margin-right: 10px;
+  /* Space between items */
+}
+
+/* Hide any default dropdown arrow (optional) */
+.ql-align .ql-picker-label::before {
+  content: none;
+  /* Remove the default arrow indicator */
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
-  #main-contianer { /* Typo: should be #main-container */
+  #main-contianer {
+    /* Typo: should be #main-container */
     width: 95%;
     padding-top: 50px;
     padding-bottom: 50px;
@@ -77,4 +176,6 @@
   .ql-snow .ql-picker.ql-size {
     width: 80px;
   }
+
+
 }

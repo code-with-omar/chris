@@ -1,14 +1,13 @@
 // Import Quill and Block
 const Block = Quill.import('blots/block');
+//font-size as like ms word
+const fontSizeArr = ['11px', '12px', '14px', '16px', '18px', '20px', '22px', '24px', '26px', '28px', '36px', '48', '72'];
 
-// Define the custom blockquote blot
-class BlockquoteBlot extends Block {
-    static blotName = 'blockquote'; // Unique name for the blot
-    static tagName = 'blockquote';    // HTML tag to be used
-}
-
+var Size = Quill.import('attributors/style/size');
+Size.whitelist = fontSizeArr;
+Quill.register(Size, true);
 // Register the custom blot with Quill
-Quill.register(BlockquoteBlot);
+
 
 // Initialize Quill editor
 const quill = new Quill('#editor-container', {
@@ -19,9 +18,9 @@ const quill = new Quill('#editor-container', {
             // Font family selection
             [{ font: ['serif', 'sans-serif', 'monospace'] }],
             // Font size selection
-            [{ size: ['small', false, 'large', 'huge'] }],
+            [{ 'size': fontSizeArr }],
             // Header styles
-            [{ header: [1, 2, 3, false] }],
+            [{ header: [1, 2, 3, 4, 5, 6, false] }],
             // Text formatting options
             ['bold', 'italic', 'underline', 'strike'], // Bold, italic, underline, strikethrough
             // Text color and background color
