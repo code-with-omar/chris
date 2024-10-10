@@ -31,7 +31,7 @@ const quill = new Quill('#editor-container', {
             [{ color: [] }, { background: [] }],
             // Ordered and bullet list options
             [{ list: 'ordered' }, { list: 'bullet' }],
-            [{ 'indent': '-1'}, { 'indent': '+1' }],
+            [{ 'indent': '-1' }, { 'indent': '+1' }],
             // Text alignment options: left (default), center, right, and justify
             [{ 'align': null }, { 'align': 'center' }, { 'align': 'right' }, { 'align': 'justify' }],
             // Blockquote and code block formatting
@@ -74,10 +74,24 @@ if (colorDropdown) {
     }
 }
 
-// Enable spellcheck for the editor content
-document.querySelector('.ql-editor').setAttribute('spellcheck', 'true');
 
 // Remove placeholder text when the editor is focused
-document.querySelector('#editor-container .ql-editor').addEventListener('focus', function() {
+document.querySelector('#editor-container .ql-editor').addEventListener('focus', function () {
     quill.root.removeAttribute('data-placeholder');
 });
+
+
+
+
+quill.on('text-change', function(delta, oldDelta, source) {
+    const format = quill.getFormat();
+    if (format.size) {
+        // Apply selected font size to all list items
+        document.querySelectorAll('ol, ul, li').forEach((listItem) => {
+            listItem.style.fontSize = format.size;
+        });
+    }
+});
+
+// Enable spellcheck for the editor content
+document.querySelector('.ql-editor').setAttribute('spellcheck', 'true');
